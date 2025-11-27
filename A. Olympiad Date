@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false); cin.tie(nullptr);
+
+    int t; cin >> t;
+    // Required counts for digits in "01032025"
+    vector<int> need(10, 0);
+    need[0] = 3;
+    need[1] = 1;
+    need[2] = 2;
+    need[3] = 1;
+    need[5] = 1;
+
+    while (t--) {
+        int n; cin >> n;
+        vector<int> a(n);
+        for (int i = 0; i < n; i++) cin >> a[i];
+
+        vector<int> cnt(10, 0);
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            cnt[a[i]]++;
+            bool ok = true;
+            for (int d = 0; d < 10; d++) {
+                if (cnt[d] < need[d]) {
+                    ok = false;
+                    break;
+                }
+            }
+            if (ok) {
+                ans = i + 1;
+                break;
+            }
+        }
+        cout << ans << '\n';
+    }
+    return 0;
+}

@@ -1,0 +1,32 @@
+// solved by Burhan Ahmad, Sunamganj,Bangladesh.
+// codeforces handle : burhan.sug02
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t; 
+    cin >> t;
+    while (t--) {
+        int n, f, k;
+        cin >> n >> f >> k;
+        vector<int> a(n);
+        for (int i = 0; i < n; i++) cin >> a[i];
+        int fav = a[f-1];
+        sort(a.rbegin(), a.rend());
+        bool removed = false, notRemoved = false;
+        for (int i = 0; i < n; i++) {
+            if (a[i] == fav) {
+                if (i < k) removed = true;
+                else notRemoved = true;
+            }
+        }
+        if (removed && notRemoved) cout << "MAYBE\n";
+        else if (removed) cout << "YES\n";
+        else cout << "NO\n";
+    }
+    return 0;
+}

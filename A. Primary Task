@@ -20,7 +20,7 @@ int main() {
         if(s.size()>2 && s.substr(0,2)=="10")
         {
             int rest = stoi(s.substr(2));
-            if(s[2]!='0' && rest>2)
+            if(s[2]!='0' && rest>=2)
                 cout<< "YES\n";
             else cout<< "NO\n";
         }

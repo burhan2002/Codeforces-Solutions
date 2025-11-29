@@ -1,0 +1,32 @@
+//solved by Burhan Ahmad, Sunamganj,Bangladesh.
+//codeforces handle : burhan.sug02
+//https://codeforces.com/problemset/problem/1877/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define endl "\n"
+#define fast_io() ios::sync_with_stdio(false); cin.tie(nullptr);
+
+int main() {
+    fast_io();
+
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int p;
+        cin>>p;
+        int k[p];
+        for(int i=0;i<p-1;i++)
+            cin>>k[i];
+
+        int ans=0;
+        for(int i=0;i<p-1;i++)
+            ans+=k[i];
+
+        cout<<-ans<<endl;
+    }
+
+    return 0;
+}

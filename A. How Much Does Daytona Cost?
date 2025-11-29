@@ -1,0 +1,50 @@
+//solved by Burhan Ahmad, Sunamganj,Bangladesh.
+//codeforces handle : burhan.sug02
+//https://codeforces.com/problemset/problem/1878/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int, int> pii;
+typedef set<int>si;
+const double PI =acos(-1);
+
+#define pb push_back
+#define endl "\n"
+#define srt(v) sort(v.begin(),v.end())
+#define rsrt(v) sort(v.rbegin(),v.rend())
+#define fast_io() ios::sync_with_stdio(false); cin.tie(nullptr);
+
+int main() {
+    fast_io();
+
+    int n;
+    cin>>n;
+    while(n--)
+    {
+        int a,b;
+        cin>>a>>b;
+        bool bb = false;
+        int arr[a];
+        for(int i=0;i<a;i++)
+        {
+            cin>>arr[i];
+        }
+        for(int i=0;i<a;i++)
+        {
+            if(arr[i]==b)
+            {
+                cout<< "YES\n";
+                bb = true;
+                break;
+            }
+        }
+        if(!bb)
+        {
+            cout<< "NO\n";
+        }
+    }
+    return 0;
+}

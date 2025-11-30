@@ -1,0 +1,53 @@
+//solved by Burhan Ahmad, Sunamganj,Bangladesh.
+//codeforces handle : burhan.sug02
+//https://codeforces.com/problemset/problem/1834/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define endl "\n"
+#define fast_io() ios::sync_with_stdio(false); cin.tie(nullptr);
+
+int main() {
+    fast_io();
+
+    int n;
+    cin>>n;
+    while(n--)
+    {
+        int p;
+        cin>>p;
+        int arr[p];
+
+        for(int i=0;i<p;i++)
+            cin>>arr[i];
+
+        int neg=0;
+        int pos=0;
+        int ans=0;
+
+        for(int i=0;i<p;i++)
+        {
+            if(arr[i]<0)
+                neg++;
+            else pos++;
+
+            ans+=arr[i];
+        }
+
+        int m=0;
+
+        while(1)
+        {
+            if(neg%2==0 && ans>=0)
+                break;
+            neg--;
+            pos++;
+            ans=-neg+pos;
+            m++;
+        }
+        cout<<m<<endl;
+    }
+
+    return 0;
+}

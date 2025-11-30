@@ -1,0 +1,48 @@
+//solved by Burhan Ahmad, Sunamganj,Bangladesh.
+//codeforces handle : burhan.sug02
+//https://codeforces.com/contest/1777/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int, int> pii;
+typedef set<int>si;
+
+#define pb push_back
+#define endl "\n"
+#define sort(v) sort(v.begin(),v.end())
+#define rsort(v) sort(v.rbegin(),v.rend())
+#define fast_io() ios::sync_with_stdio(false); cin.tie(nullptr);
+const double PI =acos(-1);
+
+int main() {
+    fast_io();
+
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int a;
+        cin>>a;
+        int arr[a];
+        int c=0;
+        for(int i=0;i<a;i++)
+        {
+            cin>>arr[i];
+        }
+
+        for(int i=0;i<a-1;i++)
+        {
+            if(arr[i]%2!=0 && arr[i+1]%2==0 || arr[i]%2==0 && arr[i+1]%2!=0)
+            {
+                continue;
+            }
+            c++;
+        }
+        cout<<c<<endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,35 @@
+//solved by Burhan Ahmad, Sunamganj,Bangladesh.
+//codeforces handle : burhan.sug02
+//https://codeforces.com/problemset/problem/2167/B
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define srt(v) sort(v.begin(),v.end())
+#define rsrt(v) sort(v.rbegin(),v.rend())
+
+#define endl "\n"
+#define fast_io() ios::sync_with_stdio(false); cin.tie(nullptr);
+
+int main() {
+    fast_io();
+
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int p;
+        cin>>p;
+        string s1,s2;
+        cin>>s1>>s2;
+
+        srt(s1);
+        srt(s2);
+
+        if(s1==s2)
+            cout<< "YES\n";
+        else cout<< "NO\n";
+    }
+
+    return 0;
+}

@@ -1,0 +1,36 @@
+//solved by Burhan Ahmad, Sunamganj,Bangladesh.
+//codeforces handle : burhan.sug02
+//https://codeforces.com/problemset/problem/1341/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define endl "\n"
+#define fast_io() ios::sync_with_stdio(false); cin.tie(nullptr);
+
+int main() {
+    fast_io();
+
+    int t;
+    cin >> t;
+    while(t--) {
+        int n,a,b,c,d;
+        cin >> n >> a >> b >> c >> d;
+
+        int Mngw = a - b;
+        int Mxgw = a + b;
+
+        int Mnpw = c - d;
+        int Mxpw = c + d;
+
+        int Mnans = n * Mngw;
+        int Mxans = n * Mxgw;
+
+        if(Mxans < Mnpw || Mnans > Mxpw)
+            cout << "No\n";
+        else
+            cout << "Yes\n";
+    }
+
+    return 0;
+}
